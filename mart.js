@@ -26,26 +26,26 @@ let loadimages/Images=(callback)=>{
         aniframes.forEach((frameNumber)=>{
             let path=imagePath(frameNumber,animation);
         loadImage(path,(image)=>{
-            images[animation][frameNumber-1]=image;
+            images/images[animation][frameNumber-1]=image;
             loadCount--;
             if(loadCount===0)
             {
-                callback(images);
+                callback(images/images);
             }
         });
         });
     });
 };
-let animate=(ctx,images,animation,callback)=>{
+let animate=(ctx,images/images,animation,callback)=>{
     images/images[animation].forEach((image,index)=>{
         setTimeout(()=>{
             ctx.clearRect(0,0,500,500);
             ctx.drawImage(image,0,0,500,500);
         },index*100);
     });
-    setTimeout(callback,images[animation].length*100);
+    setTimeout(callback,images/images[animation].length*100);
 };
-loadimages/Images((images)=>{
+loadimages/Images((images/images)=>{
     let selAn=[];
     let aux=()=>{
         let sa;
@@ -56,7 +56,7 @@ loadimages/Images((images)=>{
         else{
             sa=selAn.shift();
         }
-        animate(ctx,images,sa,aux);
+        animate(ctx,images/images,sa,aux);
     };
     aux();
     document.getElementById("kick").onclick=()=>{
