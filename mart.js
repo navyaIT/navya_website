@@ -1,13 +1,13 @@
 var c = document.getElementById("myCanvas");
 var ctx = c.getContext("2d");
 let loadImage= (src,callback)=>{
-    let img=document.createElement("img");
+    let img=document.createElement("imge
     img.onload=()=> callback(img);
     img.src=src;
 };
 
 let imagePath=(frameNumber,animation)=>{
-    return "/images/"+animation+"/"+ frameNumber +".png";
+    return "navya_website/images/images/"+animation+"/"+ frameNumber +".png";
 };
 let frames={
     idle:[1,2,3,4,5,6,7,8],
@@ -17,8 +17,8 @@ let frames={
     backward:[1,2,3,4,5,6],
     block:[1,2,3,4,5,6,7,8,9],
 };
-let loadImages=(callback)=>{
-    let images={idle:[],kick:[],punch:[],forward:[],backward:[],block:[]};
+let load images/Images=(callback)=>{
+    let  images/images={idle:[],kick:[],punch:[],forward:[],backward:[],block:[]};
     let loadCount=0;
     ["idle","kick","punch","forward","backward","block"].forEach((animation)=>{
         let aniframes=frames[animation];
@@ -26,26 +26,26 @@ let loadImages=(callback)=>{
         aniframes.forEach((frameNumber)=>{
             let path=imagePath(frameNumber,animation);
         loadImage(path,(image)=>{
-            images[animation][frameNumber-1]=image;
+            images/images[animation][frameNumber-1]=image;
             loadCount--;
             if(loadCount===0)
             {
-                callback(images);
+                callback(images/images);
             }
         });
         });
     });
 };
-let animate=(ctx,images,animation,callback)=>{
-    images[animation].forEach((image,index)=>{
+let animate=(ctx,images/images,animation,callback)=>{
+    images/images[animation].forEach((image,index)=>{
         setTimeout(()=>{
             ctx.clearRect(0,0,500,500);
             ctx.drawImage(image,0,0,500,500);
         },index*100);
     });
-    setTimeout(callback,images[animation].length*100);
+    setTimeout(callback,images/images[animation].length*100);
 };
-loadImages((images)=>{
+loadimages/Images((images/images)=>{
     let selAn=[];
     let aux=()=>{
         let sa;
@@ -56,7 +56,7 @@ loadImages((images)=>{
         else{
             sa=selAn.shift();
         }
-        animate(ctx,images,sa,aux);
+        animate(ctx,images/images,sa,aux);
     };
     aux();
     document.getElementById("kick").onclick=()=>{
