@@ -7,7 +7,7 @@ let loadImage= (src,callback)=>{
 };
 
 let imagePath=(frameNumber,animation)=>{
-    return "navya_website/imag/images/"+animation+"/"+ frameNumber +".png";
+    return "navya_website/images/images/"+animation+"/"+ frameNumber +".png";
 };
 let frames={
     idle:[1,2,3,4,5,6,7,8],
