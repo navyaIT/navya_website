@@ -1,6 +1,6 @@
 var c = document.getElementById("myCanvas");
 var ctx = c.getContext("2d");
-let load images/image= (src,callback)=>{
+let load images/images= (src,callback)=>{
     let img=document.createElement("imge
     img.onload=()=> callback(img);
     img.src=src;
@@ -17,7 +17,7 @@ let frames={
     backward:[1,2,3,4,5,6],
     block:[1,2,3,4,5,6,7,8,9],
 };
-let load images/Images=(callback)=>{
+let load images/images=(callback)=>{
     let  images/images={idle:[],kick:[],punch:[],forward:[],backward:[],block:[]};
     let loadCount=0;
     ["idle","kick","punch","forward","backward","block"].forEach((animation)=>{
@@ -25,7 +25,7 @@ let load images/Images=(callback)=>{
         loadCount=loadCount+aniframes.length;
         aniframes.forEach((frameNumber)=>{
             let path=imagePath(frameNumber,animation);
-        loadImage(path,(image)=>{
+        load images/images(path,(image)=>{
             images/images[animation][frameNumber-1]=image;
             loadCount--;
             if(loadCount===0)
@@ -45,7 +45,7 @@ let animate=(ctx,images/images,animation,callback)=>{
     });
     setTimeout(callback,images/images[animation].length*100);
 };
-loadimages/Images((images/images)=>{
+load images/images((images/images)=>{
     let selAn=[];
     let aux=()=>{
         let sa;
