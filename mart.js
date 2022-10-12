@@ -17,7 +17,7 @@ let frames={
     backward:[1,2,3,4,5,6],
     block:[1,2,3,4,5,6,7,8,9],
 };
-let loadimages/Images=(callback)=>{
+let load images/Images=(callback)=>{
     let  images/images={idle:[],kick:[],punch:[],forward:[],backward:[],block:[]};
     let loadCount=0;
     ["idle","kick","punch","forward","backward","block"].forEach((animation)=>{
