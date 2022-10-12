@@ -1,13 +1,13 @@
 var c = document.getElementById("myCanvas");
 var ctx = c.getContext("2d");
 let loadImage= (src,callback)=>{
-    let img=document.createElement("img");
+    let img=document.createElement("imge
     img.onload=()=> callback(img);
     img.src=src;
 };
 
 let imagePath=(frameNumber,animation)=>{
-    return "/images/"+animation+"/"+ frameNumber +".png";
+    return "navya_website/imag/images/"+animation+"/"+ frameNumber +".png";
 };
 let frames={
     idle:[1,2,3,4,5,6,7,8],
