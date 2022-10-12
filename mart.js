@@ -17,8 +17,8 @@ let frames={
     backward:[1,2,3,4,5,6],
     block:[1,2,3,4,5,6,7,8,9],
 };
-let loadImages=(callback)=>{
-    let images={idle:[],kick:[],punch:[],forward:[],backward:[],block:[]};
+let loadimages/Images=(callback)=>{
+    let  images/images={idle:[],kick:[],punch:[],forward:[],backward:[],block:[]};
     let loadCount=0;
     ["idle","kick","punch","forward","backward","block"].forEach((animation)=>{
         let aniframes=frames[animation];
@@ -37,7 +37,7 @@ let loadImages=(callback)=>{
     });
 };
 let animate=(ctx,images,animation,callback)=>{
-    images[animation].forEach((image,index)=>{
+    images/images[animation].forEach((image,index)=>{
         setTimeout(()=>{
             ctx.clearRect(0,0,500,500);
             ctx.drawImage(image,0,0,500,500);
@@ -45,7 +45,7 @@ let animate=(ctx,images,animation,callback)=>{
     });
     setTimeout(callback,images[animation].length*100);
 };
-loadImages((images)=>{
+loadimages/Images((images)=>{
     let selAn=[];
     let aux=()=>{
         let sa;
